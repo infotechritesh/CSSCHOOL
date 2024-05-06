@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CS School </title>
+    <link rel="shortcut icon" href="images/1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<style>
+    header {
+        width: 90%;
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+
+    .band {
+        width: 100%;
+        max-width: 1240px;
+        margin: 130px auto;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+        @media (min-width: 30em) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 60em) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
+
+        &:hover {
+            top: -2px;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        article {
+            padding: 20px;
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 0;
+            color: #454360;
+        }
+
+        p {
+            flex: 1;
+            line-height: 1.4;
+            font-size: 20px;
+            margin: 10px 10px;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: bold;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin: 2em 0 0 0;
+        }
+
+        .thumb {
+            padding-bottom: 60%;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+
+    .item-1 {
+        @media (min-width: 60em) {
+            grid-column: 1 / span 2;
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>CS <span style="color: red;">School</span></h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blogs.html">Blog's</a></li>
+        </ul>
+        <div class="ex">
+            <a href="#" id="sign">Sign Up</a>
+            <a href="#">Log In</a>
+        </div>
+    </nav>
+
+    <!-- Blogs Content Here -->
+    <header>
+        <h1>Cool Articles</h1>
+    </header>
+    <div class="band">
+        <div class="item-1">
+            <a href="#" class="card">
+                <div class="thumb"
+                    style="background-image: url(https://koniukhchaslau.com/wp-content/uploads/2020/06/algorithmic-trading-1.jpg);">
+                </div>
+                <article>
+                    <h1>How Algorithmic Trading Systems Work</h1>
+                    <p>In India, the popularity of online trading has helped transform the financial landscape. This has
+                        led to over 20% of all trading is now done via mobile through trading apps. In line with this,
+                        another development many traders have highlighted is the use of algorithmic trading systems to
+                        take advantage of ever-changing market opportunities. To date, algorithmic trading systems are
+                        used in up to 60% of all trading volume.</p>
+                    <span>Mary Winkler</span>
+                </article>
+            </a>
+        </div>
+        <div class="item-2">
+            <a href="#" class="card">
+                <div class="thumb" style="background-image: url(https://i.ytimg.com/vi/vufv21nBZF8/maxresdefault.jpg);">
+                </div>
+                <article>
+                    <h1>Build an Email Validator with HTML, CSS, and JavaScript</h1>
+                    <p>Learn how to create a responsive Email Validator using HTML, CSS, and JavaScript. This
+                        step-by-step guide walks you through integrating the Email Validation API to validate email
+                        addresses effectively. Perfect for beginners and experts alike!</p>
+                    <span>Harry Brignull</span>
+                </article>
+            </a>
+        </div>
+        <div class="item-3">
+            <a href="#" class="card">
+                <div class="thumb" style="background-image: url(https://i.ytimg.com/vi/gLaa4Pl1j74/maxresdefault.jpg);">
+                </div>
+                <article>
+                    <h1>How to find the Python Installation Path on Windows?</h1>
+                    <p>Discover how to locate the Python installation path on your Windows system using two effective
+                        methods: the traditional Command Prompt and the modern Terminal. Whether you're troubleshooting
+                        or setting up environment variables, this guide provides clear, step-by-step instructions with
+                        visuals to help you find the information you need. Explore now!</p>
+                    <span>Melody Nieves</span>
+                </article>
+            </a>
+        </div>
+        <div class="item-4">
+            <a href="#" class="card">
+                <div class="thumb" style="background-image: url(https://i.ytimg.com/vi/cneQ5qvMwTg/maxresdefault.jpg);">
+                </div>
+                <article>
+                    <h1>How to Open the Terminal in Visual Studio Code</h1>
+                    <p>Learn how to open the terminal in Visual Studio Code (VS Code) using various methods, such as the
+                        menu bar, keyboard shortcuts, command palette, and sidebar icon. This guide also covers
+                        customizing the terminal and working with multiple terminals within VS Code.</p>
+                    <span>Kezz Bracey</span>
+                </article>
+            </a>
+        </div>
+        <div class="item-5">
+            <a href="#" class="card">
+                <div class="thumb" style="background-image: url(https://i.ytimg.com/vi/xxkDLvS5MTY/maxresdefault.jpg);">
+                </div>
+                <article>
+                    <h1>Using TailwindCSS with Python Flask</h1>
+                    <p>I use Tailwind CSS alot and recently I integrated my flask app with TailwindCSS in the best
+                        possible way. Other online guides are mostly outdated, so here is how to exactly integrate
+                        tailwind css with flask.</p>
+                    <span>Rose</span>
+                </article>
+            </a>
+        </div>
+        <div class="item-6">
+            <a href="#" class="card">
+                <div class="thumb"
+                    style="background-image: url(https://matchkraft.com/wp-content/uploads/2020/09/image-36-1.png);">
+                </div>
+                <article>
+                    <h1>Fuzzy Matching: What It Is And How It Works</h1>
+                    <p>Fuzzy matching is a powerful technique that enables data analysts to identify and link similar or
+                        related data points, even when dealing with inconsistencies, errors, and variations in data.
+                    </p>
+
+                    <span>Marie Gardiner</span>
+                </article>
+            </a>
+        </div>
+        <div class="item-7">
+            <a href="#" class="card">
+                <div class="thumb" style="background-image: url(https://i.ytimg.com/vi/8XpMVYH6fq4/maxresdefault.jpg);">
+                </div>
+                <article>
+                    <h1>Should You Upgrade To Windows 11 Just Yet? + Installation of Windows 11</h1>
+                    <p>If you are confused between updating your Windows 10 PC to Windows 11, then this blog is for you
+                    </p>
+                    <span>Kendra Schaefer</span>
+                </article>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Footer Content Here -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="intro">
+                <h1>CS <span style="color: red;">School</span></h1>
+                <p>India's most Loved Coding and Programmer Comminity !
+                    Admission Now .
+                </p>
+            </div>
+            <ul>
+                <li>Courses</li>
+                <li>Tutorials</li>
+                <li>Privacy</li>
+                <li>Term & Condition </li>
+            </ul>
+            <ul>
+                <li>abcd@gmail.com</li>
+                <li>Contact Us</li>
+                <li>Studies</li>
+                <li>College</li>
+            </ul>
+        </div>
+        <div class="foot">
+            <ul>
+                <li id="author"> <span style="color: red;">D</span>eveloped By <span style="color: red;">R</span>itesh
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
